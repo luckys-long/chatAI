@@ -61,7 +61,7 @@ const rules  = reactive({
   const formRef = ref()
   
   const submitForm=(formRef)=>{
-
+    router.push(`home`);
   }
 </script>
 

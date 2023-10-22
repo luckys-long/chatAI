@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "dist-electron/main/index.js",
   "description": "Really simple Electron + Vue + Vite PRO.",
-  "author": "allen",
+  "author": "allen 18202216177@163.com",
   "license": "MIT",
   "private": true,
   "keywords": [

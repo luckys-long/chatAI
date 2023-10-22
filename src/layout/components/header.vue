@@ -12,11 +12,11 @@
       <el-icon @click="onExit"><Fold /></el-icon>
     </div>
   </div>
-  <setting-dialog
+  <!-- <setting-dialog
     :isShow="isShow"
     :before-close="() => (isShow = false)"
     :doAddHandle="() => (isShow = false)"
-  ></setting-dialog>
+  ></setting-dialog> -->
 </template>
 <script setup lang="ts">
 import { ElIcon,dayjs } from "element-plus";
@@ -28,18 +28,13 @@ import { useGlobalStore } from '@/stores/global'
 
 const router = useRouter();
 
-const SettingDialog = defineAsyncComponent(
-  () => import("@/components/settingDialog/index.vue")
-);
 
 const globalStore =useGlobalStore()
 const loginInfo = computed(() => globalStore.loginInfo);
 
-// $ICP
-const $ICP = getCurrentInstance()?.appContext.config.globalProperties.$ICP;
 
 const zoomIn = () => {
-  // this.$electron.ipcRenderer.send("window-min");
+
 };
 const zoomOut = () => {
   console.log(1111);
@@ -58,12 +53,6 @@ useIntervalFn(()=>{
 
 
 const onExit=()=>{
-  const params={
-    callback:(data: any)=>{
-      console.log('退出放回',data);
-    }
-  }
-  $ICP.dispatch.auth.unifiedLogout(params);
   router.push("login");
 }
 
@@ -73,9 +62,7 @@ const isShow = ref(false);
 <style lang="scss" scoped>
 .header {
   background: #34363c;
-  height: vh(121);
-  padding-left: vw(59);
-  padding-right: vw(44);
+  height: vh(110);
   align-items: center;
   display: flex;
   justify-content: space-between;
