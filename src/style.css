@@ -36,3 +36,13 @@ body{
   background-color: #0792d7;
 }
 
+/* semantic color variables for this project */
+:root[data-theme=ligth] {
+  --color-background: var(--vt-c-white);
+}
+ 
+@media (prefers-color-scheme: dark) {
+  :root[data-theme=dark] {
+    --color-background: var(--vt-c-black);
+  }
+}

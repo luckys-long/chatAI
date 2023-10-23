@@ -61,7 +61,6 @@ const isShow = ref(false);
 
 <style lang="scss" scoped>
 .header {
-  background: #34363c;
   height: vh(110);
   align-items: center;
   display: flex;

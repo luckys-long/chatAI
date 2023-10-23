@@ -1,13 +1,13 @@
 <template>
-  <el-scrollbar height="400px">
-    <el-tag v-for="item in 20" :key="item" effect="light">
+  <el-scrollbar >
+    <p v-for="item in 20" :key="item" effect="light">
       {{ item }}
-    </el-tag>
+    </p>
   </el-scrollbar>
 </template>
 
 <script setup lang="ts">
-import { ElScrollbar, ElTag } from "element-plus";
+import { ElScrollbar } from "element-plus";
 </script>
 
 <style scoped>

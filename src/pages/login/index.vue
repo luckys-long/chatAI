@@ -101,7 +101,7 @@ const rules  = reactive({
   .login-form {
     width: vw(574);
     height: vh(454);
-    background: rgba(38, 38, 38, 0.3);
+    // background: rgba(38, 38, 38, 0.3);
     min-width: 394px;
     min-height: 322px;
     @include flexCenter;

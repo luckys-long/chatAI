@@ -1,4 +1,4 @@
-import { app, BrowserWindow, shell, ipcMain } from 'electron'
+import { app, BrowserWindow, shell, ipcMain, nativeTheme } from 'electron'
 import { release } from 'node:os'
 import { join } from 'node:path'
 
@@ -141,3 +141,15 @@ ipcMain.handle('open-win', (_, arg) => {
 // ipcMain.on('stopRecording', () => {
 //   console.log('结束录屏');
 // });
+
+
+// 获取APP当前主题模式
+ipcMain.handle("dark-mode", () => {
+  return nativeTheme.themeSource;
+});
+
+// 设置APP主题模式
+ipcMain.handle("dark-mode:change", (_, type: "system" | "light" | "dark") => {
+  nativeTheme.themeSource = type;
+  return nativeTheme.themeSource;
+});
