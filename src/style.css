@@ -1,6 +1,5 @@
 html,body,ul,ol,li,button,p{
-  margin: 0;
-  padding: 0;
+
   list-style: none;
 }
 html{
@@ -9,6 +8,8 @@ html{
 
 *{
 box-sizing: border-box; 
+margin: 0;
+padding: 0;
 }
 
 body{

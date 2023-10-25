@@ -193,6 +193,7 @@ const IatRecorder = class {
       }
     };
   }
+
   recorderStart() {
     if (!this.audioContext) {
       this.recorderInit();
@@ -213,11 +214,7 @@ const IatRecorder = class {
     }
     this.setStatus("end");
   }
-  // 处理音频数据
-  // transAudioData(audioData) {
-  //   audioData = transAudioData.transaction(audioData)
-  //   this.audioData.push(...audioData)
-  // }
+
   // 对处理后的音频数据进行base64编码，
   toBase64(buffer) {
     var binary = "";

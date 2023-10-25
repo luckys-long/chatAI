@@ -41,6 +41,9 @@ import Toolbar from "@/layout/components/header.vue";
 import ChatList from "./components/chatList.vue";
 import DarkLight from "@/components/darkLight.vue";
 import SessionArea from "./components/sessionArea.vue";
+
+import { useElementSize } from '@vueuse/core'
+
 </script>
 
 <style lang="scss">
