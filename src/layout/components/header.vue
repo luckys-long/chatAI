@@ -1,7 +1,7 @@
 <template>
   <div class="header" style="-webkit-app-region: drag">
     <div class="h-left">
-      <p>云律，您的好帮手</p>
+      <!-- <p>云律，您的好帮手</p> -->
       <p>law link</p>
     </div>
     <div class="h-right">
@@ -62,6 +62,7 @@ const isShow = ref(false);
 <style lang="scss" scoped>
 .header {
   height: vh(110);
+  background: #34363c;
   align-items: center;
   display: flex;
   justify-content: space-between;

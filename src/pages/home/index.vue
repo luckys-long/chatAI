@@ -1,23 +1,29 @@
 <template>
   <div class="wrap_layout">
-    <el-container >
+    <el-container>
       <el-header> <Toolbar></Toolbar></el-header>
-      <el-container>
-        <el-aside width="200px">
+      <el-container style="width: 100vw; height: calc(100vh - 80px)">
+        <el-aside width="280px" style="background: #34363c">
           <div class="layout-sider">
             <div class="sider-wrap">
-              <el-button type="primary" :icon="Plus">开始新会话</el-button>
+              <el-button type="primary" :icon="Plus" class="start-btn"
+                >开始新会话</el-button
+              >
               <ChatList></ChatList>
+              <div>
+                 <p>清除全部会话</p>
+                 <p>个人中心</p>
+                 <p>退出</p>
+              </div>
             </div>
           </div>
         </el-aside>
         <el-container>
           <el-main> <div class="layout-main"></div></el-main>
-          <el-footer>Footer</el-footer>
+          <el-footer><SessionArea></SessionArea></el-footer>
         </el-container>
       </el-container>
     </el-container>
-    <DarkLight />
   </div>
 </template>
 
@@ -30,21 +36,23 @@ import {
   ElFooter,
   ElHeader,
 } from "element-plus";
-import {Plus} from '@element-plus/icons-vue'
+import { Plus } from "@element-plus/icons-vue";
 import Toolbar from "@/layout/components/header.vue";
 import ChatList from "./components/chatList.vue";
-import DarkLight from '@/components/darkLight.vue'
-
+import DarkLight from "@/components/darkLight.vue";
+import SessionArea from "./components/sessionArea.vue";
 </script>
 
 <style lang="scss">
-.wrap_layout{
+.wrap_layout {
   width: 100vw;
   height: 100vh;
-   .el-header{
+  .el-header {
     padding: 0 !important;
     height: 100%;
+  }
+  .start-btn {
+    margin: 10px;
+  }
 }
-}
-
 </style>

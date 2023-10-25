@@ -1,9 +1,11 @@
 <template>
-  <el-scrollbar >
+  <div class="chat-list">
+  <el-scrollbar height="400px">
     <p v-for="item in 20" :key="item" effect="light">
       {{ item }}
     </p>
   </el-scrollbar>
+</div>
 </template>
 
 <script setup lang="ts">
@@ -21,5 +23,8 @@ import { ElScrollbar } from "element-plus";
   border-radius: 4px;
   background: var(--el-color-primary-light-9);
   color: var(--el-color-primary);
+}
+.chat-list{
+  margin-top: 10px;
 }
 </style>

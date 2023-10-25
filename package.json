@@ -47,8 +47,10 @@
   "dependencies": {
     "@element-plus/icons-vue": "^1.1.4",
     "axios": "^1.5.1",
+    "crypto-js": "^4.2.0",
     "element-plus": "^2.3.8",
     "mitt": "^3.0.1",
+    "openai": "^4.13.0",
     "pinia": "^2.1.4",
     "postcss-pxtorem": "^6.0.0",
     "socket.io-client": "^4.7.1",
