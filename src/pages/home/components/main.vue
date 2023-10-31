@@ -22,6 +22,7 @@ const { messages, isLoading, addMessage } = useMessage();
 import aiImg from "@/assets/imgs/ai.png";
 import profile from "@/assets/imgs/profile-image.png";
 console.log("=====>", messages);
+
 </script>
 
 <style lang="scss" scoped>
