@@ -125,16 +125,16 @@ onMounted(() => {
     cursor: col-resize;
     float: left;
     position: relative;
-    top: 45%;
-    background: blue;
+    top: 47%;
+    background: rgb(214, 214, 214);
     border-radius: 5px;
     margin-top: -10px;
-    width: 10px;
-    height: 50px;
+    width: 8px;
+    height: 40px;
     background-size: cover;
     background-position: center;
     /*z-index: 99999;*/
-    font-size: 32px;
+    font-size: 25px;
     color: white;
   }
   .resize:hover {
@@ -147,8 +147,6 @@ onMounted(() => {
     padding-left: 25px;
     color: #fff;
     line-height: 30px;
-    height: 200px;
-
     overflow: hidden;
   }
 }

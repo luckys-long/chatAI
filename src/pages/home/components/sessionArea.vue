@@ -8,11 +8,11 @@
     <img v-if="isShow" :src="loadingImage"  class="voice-img">
     <el-input
       v-model="text"
-      placeholder="Please input"
+      placeholder="请输入您的问题"
       type="text"
     />
     <!-- <el-button @mousedown.native="gmousedown" @mouseup="gmouseup">按住说话</el-button> -->
-    <el-button round @click="onSend" :icon="Promotion"></el-button>
+    <el-button ref="submitEle" round @click="onSend" :icon="Promotion" ></el-button>
   
   </div>
 </template>
@@ -21,7 +21,7 @@
 import { ElButton, ElInput } from "element-plus";
 import XFRecorder from '@/plugins/xfRecorder'
 import { Plus,Promotion } from "@element-plus/icons-vue";
-
+import { useEventListener } from '@vueuse/core'
 import { useMessage } from '@/hooks/useMessage'
 
 const loadingImage = new URL('../../../assets/imgs/timg.png', import.meta.url).href;
@@ -30,20 +30,21 @@ const { addMessage } = useMessage()
 let iatRecorder 
 
 const text = ref();
-const speechText=ref()
 const isShow=ref(false)
-
+const submitEle = ref()
 
 const onSpeak=()=>{
   iatRecorder.start()
   isShow.value=true
 }
 
+
+
 const onStop=()=>{
   iatRecorder.stop()
   isShow.value=false
-  speechText.value=iatRecorder.resultText
-  addMessage(speechText.value)
+  console.log("====>",iatRecorder);
+  text.value=iatRecorder.resultText
 }
 
 const onSend= async()=>{
@@ -51,9 +52,12 @@ addMessage(text.value)
 text.value=''
 }
 
+
 onMounted(()=>{
   iatRecorder = new XFRecorder('zh_cn')
 })
+
+useEventListener(submitEle, 'keydown', (e) => { onSend() })
 
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="chat-list">
-  <el-scrollbar height="400px">
+  <el-scrollbar height="calc(100vh - 280px)">
     <p v-for="item in 20" :key="item" effect="light">
       {{ item }}
     </p>
