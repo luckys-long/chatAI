@@ -1,8 +1,8 @@
 <template>
   <div class="header" style="-webkit-app-region: drag">
     <div class="h-left">
-      <!-- <p>云律，您的好帮手</p> -->
-      <p>law link</p>
+      <p>云律，您的好帮手</p>
+      <p>Legal Advisor Robot</p>
     </div>
     <div class="h-right">
       <span>{{ nowTimes }}</span>
@@ -69,6 +69,7 @@ const isShow = ref(false);
   .h-left {
     color: #00a0ff;
     text-align: left;
+    margin-left: 10px;
     :nth-child(1) {
       font-size: 21px;
       font-family: YouSheBiaoTiHei;
@@ -86,6 +87,7 @@ const isShow = ref(false);
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-right: 10px;
     :deep(.el-icon) {
       margin-left: 1vw;
       cursor: pointer;

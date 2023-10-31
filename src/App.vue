@@ -1,8 +1,8 @@
 <template>
   <div id="app-view" style="height: 100%; overflow: hidden">
-    <div class="back">
+    <!-- <div class="back">
       <el-button @click="goBack" type="primary">返回上一级</el-button>
-    </div>
+    </div> -->
     <router-view />
   </div>
 </template>
