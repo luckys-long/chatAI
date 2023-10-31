@@ -1,33 +1,38 @@
 <template>
   <div class="footer-wrap">
-    <div>
-        <el-button round @click="onSpeak"> <i class="iconfont icon-renqun-01"> 开始录音</i></el-button>
-        <el-button round @click="onStop"> <i class="iconfont icon-renqun-01">结束录音</i></el-button>
+    <div style="display: flex;">
+        <el-button round @click="onSpeak"> <i class="iconfont icon-Microphone"> </i></el-button>
+        <el-button round @click="onStop"> <i class="iconfont icon-microphoneoff"></i></el-button>
     </div>
 
-    <img v-if="isShow" :src="loadingImage" alt="#" srcset="#" class="voice-img">
+    <img v-if="isShow" :src="loadingImage"  class="voice-img">
     <el-input
       v-model="text"
       placeholder="Please input"
       type="text"
     />
     <!-- <el-button @mousedown.native="gmousedown" @mouseup="gmouseup">按住说话</el-button> -->
-    <el-button round> <i class="iconfont icon-renqun-01"></i></el-button>
-    <p style="color: aliceblue;">{{ speechText }}</p>
+    <el-button round @click="onSend" :icon="Promotion"></el-button>
+  
   </div>
 </template>
 
 <script setup>
 import { ElButton, ElInput } from "element-plus";
 import XFRecorder from '@/plugins/xfRecorder'
+import { Plus,Promotion } from "@element-plus/icons-vue";
 
-const loadingImage = new URL('@/assets/imgs/timg.png', import.meta.url).href;
+import { useMessage } from '@/hooks/useMessage'
+
+const loadingImage = new URL('../../../assets/imgs/timg.png', import.meta.url).href;
+const { addMessage } = useMessage()
 
 let iatRecorder 
 
 const text = ref();
 const speechText=ref()
 const isShow=ref(false)
+
 
 const onSpeak=()=>{
   iatRecorder.start()
@@ -38,6 +43,12 @@ const onStop=()=>{
   iatRecorder.stop()
   isShow.value=false
   speechText.value=iatRecorder.resultText
+  addMessage(speechText.value)
+}
+
+const onSend= async()=>{
+addMessage(text.value)
+text.value=''
 }
 
 onMounted(()=>{
@@ -52,10 +63,10 @@ onMounted(()=>{
     .voice-img{
       position: fixed;
       z-index: 999;
-      left: 100px;
-      top: 100px;
-      width: 150px;
-      height: 150px;
+      left: 50vw;
+      top: 38vh;
+      width: 200px;
+      height: 200px;
     }
 }
 

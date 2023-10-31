@@ -8,7 +8,7 @@ const { superStorage } = useStorage();
 
 const service = axios.create({
   baseURL: '/',
-  timeout: 30000, // request timeout
+  timeout: 60000, // request timeout
 });
 
 service.interceptors.request.use((config) => {
@@ -28,7 +28,7 @@ service.interceptors.request.use((config) => {
 service.interceptors.response.use(
   (response) => {
     const res = response.data;
-    return res?.data;
+    return res;
   },
   (error) => Promise.reject(error)
 );
