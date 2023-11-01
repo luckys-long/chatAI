@@ -6,7 +6,6 @@
         <el-aside class="left">
           <div class="layout-sider">
             <div class="sider-wrap">
-              <a data-animation="ripple" @click.prevent="onCreateSession">开始 <span style="font-weight: bold;">新会话</span></a>
               <ChatList></ChatList>
               <div class="left-bottom">
                 <p>清除全部会话</p>
@@ -96,9 +95,7 @@ onMounted(() => {
   dragControllerDiv();
 });
 
-const onCreateSession=()=>{
-  
-}
+
 
 </script>
 
@@ -151,36 +148,6 @@ const onCreateSession=()=>{
     overflow: hidden;
   }
 
-  *[data-animation="ripple"]{
-    height: 100%;
-	width: 60%;
-  margin: 15px;
-	display: block;
-	outline: none;
-	padding: 13px;
-	color: #fff;
-	text-transform: uppercase;
-	background: linear-gradient(135deg, #e570e7 0%,#79f1fc 100%);
-	box-sizing: border-box;
-	text-align: center;
-	line-height: 14px;
-	font-family: roboto, helvetica;
-	font-weight: 200;
-	letter-spacing: 1px;
-	text-decoration: none;
-	box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
-	cursor: pointer;
-  /*border-radius: 50px;*/
-	-webkit-tap-highlight-color: transparent;
-	border-radius: 5px;
-  }
-
-  *[data-animation="ripple"]:focus{
-    outline: none;
-  }
-  *[data-animation="ripple"]::selection {
-	background: transparent;
-	pointer-events: none;
-}
+  
 }
 </style>
