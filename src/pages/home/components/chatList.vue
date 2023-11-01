@@ -102,7 +102,6 @@ const onClickItem = (item: any) => {};
   .chat-item:hover {
     background: rgba(140, 147, 157, 0.15);
     cursor: pointer;
- 
   }
 }
 

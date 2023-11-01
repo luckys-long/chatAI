@@ -4,14 +4,15 @@ export const useGlobalStore = defineStore({
   id: "global",
   state: () => ({
     loginInfo: {} as any,
-    personnelTree: [] as any,
-    phoneList: [] as any[],
+    sessionInfo: {} as any,
   }),
   getters: {},
   actions: {
     changeLoginInfo(info: any) {
       this.loginInfo = info;
     },
-
+    changeSessionInfo(info: any) {
+      this.sessionInfo = info;
+    },
   },
 });
