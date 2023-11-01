@@ -43,6 +43,7 @@ initializeChat()
     align-items: center;
   }
   .row-left {
+    margin-top: 10px;
     display: flex;
     justify-content: flex-start;
     box-shadow: 0 16px 20px 0 rgba(174,167,223,.06);
