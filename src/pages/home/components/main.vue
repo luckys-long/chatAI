@@ -13,13 +13,14 @@
         </div>
       </div>
     </div>
+    <CustomerLoading :show="isLoading"></CustomerLoading>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useMessage } from "@/hooks/useMessage";
 const { messages, isLoading, addMessage,initializeChat } = useMessage();
-
+import CustomerLoading from "@/components/customerLoding.vue";
 import aiImg from "@/assets/imgs/ai.png";
 import profile from "@/assets/imgs/profile-image.png";
 

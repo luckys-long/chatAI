@@ -1,5 +1,6 @@
 <template>
   <div class="doting" v-if="show">
+    AI正在思考中,请稍后
     <div class="point1"></div>
     <div class="point2"></div>
     <div class="point3"></div>

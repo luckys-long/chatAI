@@ -40,6 +40,9 @@
 <script setup lang="ts">
 import { ElScrollbar, ElDivider } from "element-plus";
 import { uuidGenerate } from "@/hooks/utils";
+import { useMessage } from '@/hooks/useMessage'
+
+const { addMessage,initializeChat } = useMessage()
 
 const chatList = ref([
   { title: "默认会话", isEdit: false, id: uuidGenerate() },
@@ -54,6 +57,7 @@ const onCreateSession = () => {
   nextTick(() => {
     document.getElementById("item-input")?.focus();
   });
+  initializeChat()
 };
 const onEdit = (item: { isEdit: boolean }) => {
   item.isEdit = true;

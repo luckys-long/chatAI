@@ -1,7 +1,7 @@
 <template>
   <div class="header" style="-webkit-app-region: drag">
     <div class="h-left">
-      <p>云律，您的好帮手</p>
+      <p>云律，您身边的法律顾问</p>
       <p>Legal Advisor Robot</p>
     </div>
     <div class="h-right">

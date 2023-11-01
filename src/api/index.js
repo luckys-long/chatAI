@@ -10,11 +10,12 @@ export  const sendMessage = async (messages=[{role:'user',content:'你好'},{rol
     stream: false,
     // temperature:0.7 //0-2 控制输出的发散程度
   })
+  // https://api.openai.com/v1/chat/completions
   const apiKey = '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'
   try {
    return request(
     {
-      url: 'https://api.openai.com/v1/chat/completions',
+      url: 'https://api.openai-proxy.com/v1/chat/completions',
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
