@@ -11,7 +11,7 @@ const initializeChat = () => {
   };
   const welcomeMessage = {
     role: "assistant",
-    content: "嗨，我今天可以帮到你什么吗？",
+    content: "嗨，我是一个拥有强大的法律知识库的生成式AI，今天可以帮到你什么吗？",
   };
   messages.value = [systemMessage, welcomeMessage];
 };

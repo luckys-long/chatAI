@@ -44,7 +44,10 @@ const onStop=()=>{
   iatRecorder.stop()
   isShow.value=false
   console.log("====>",iatRecorder);
-  text.value=iatRecorder.resultText
+  nextTick(()=>{
+    text.value=iatRecorder.resultText
+  })
+
 }
 
 const onSend= async()=>{

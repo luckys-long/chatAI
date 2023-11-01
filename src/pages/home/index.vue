@@ -116,7 +116,7 @@ const onCreateSession=()=>{
   }
   .left {
     width: 280px;
-    background: #34363c;
+    background: rgb(32, 33, 35);
     border-right: 1px solid #494f5f;
   }
   .start-btn {
@@ -147,7 +147,7 @@ const onCreateSession=()=>{
     flex-direction: column;
     padding-left: 25px;
     color: #fff;
-    line-height: 30px;
+    line-height: 35px;
     overflow: hidden;
   }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="chat-wrap">
     <div v-for="(item, i) in messages">
-      <div :class="item.role === 'user' ? 'row-right' : 'row-left'" :key="i">
+      <div v-if="item.role!=='system'" :class="item.role === 'user' ? 'row-right' : 'row-left'" :key="i">
         <div v-if="item.role !== 'user'">
           <img :src="aiImg" className="avatar-icon" alt="avatar" />
         </div>
@@ -18,10 +18,11 @@
 
 <script setup lang="ts">
 import { useMessage } from "@/hooks/useMessage";
-const { messages, isLoading, addMessage } = useMessage();
+const { messages, isLoading, addMessage,initializeChat } = useMessage();
+
 import aiImg from "@/assets/imgs/ai.png";
 import profile from "@/assets/imgs/profile-image.png";
-console.log("=====>", messages);
+initializeChat()
 
 </script>
 
