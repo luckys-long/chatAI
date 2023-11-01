@@ -8,18 +8,38 @@
             <div class="sider-wrap">
               <ChatList></ChatList>
               <div class="left-bottom">
-                <p>清除全部会话</p>
-                <p>个人中心</p>
-                <p>退出</p>
+                <p>
+                  <i
+                    class="iconfont icon-yaoqing"
+                    style="margin-right: 0.5em"
+                  ></i>
+                  邀请好友
+                </p>
+            
+                <p>
+                  <i
+                    class="iconfont icon-bianji"
+                    style="margin-right: 0.5em"
+                  ></i>
+                  清除全部会话
+                </p>
+                <p   @click.prevent="onExit">
+                  <i
+                    class="iconfont icon-tuichu"
+                    style="margin-right: 0.5em"
+                  ></i
+                  >退出
+                </p>
               </div>
             </div>
           </div>
         </el-aside>
         <div class="resize" title="收缩侧边栏">⋮</div>
         <el-container class="right">
-          <el-main> <div class="layout-main">
-              <ChatMain></ChatMain>
-          </div></el-main>
+          <el-main>
+            <div class="layout-main">
+              <ChatMain></ChatMain></div
+          ></el-main>
           <el-footer><SessionArea></SessionArea></el-footer>
         </el-container>
       </el-container>
@@ -28,7 +48,6 @@
 </template>
 
 <script setup>
-
 import {
   ElButton,
   ElContainer,
@@ -37,12 +56,14 @@ import {
   ElFooter,
   ElHeader,
 } from "element-plus";
-import { Plus,Promotion } from "@element-plus/icons-vue";
+import { Plus, Promotion } from "@element-plus/icons-vue";
 import Toolbar from "@/layout/components/header.vue";
 import ChatList from "./components/chatList.vue";
 import SessionArea from "./components/sessionArea.vue";
-
+import { useRouter, useRoute } from "vue-router";
 import ChatMain from "./components/main.vue";
+
+const router = useRouter();
 
 function dragControllerDiv() {
   let resize = document.getElementsByClassName("resize");
@@ -95,8 +116,9 @@ onMounted(() => {
   dragControllerDiv();
 });
 
-
-
+const onExit=()=>{
+  router.push("login");
+}
 </script>
 
 <style lang="scss">
@@ -142,12 +164,20 @@ onMounted(() => {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    padding-left: 25px;
+    border-top: 1px #525050 solid;
     color: #fff;
     line-height: 35px;
     overflow: hidden;
+    p:hover {
+      background: rgba(140, 147, 157, 0.15);
+      cursor: pointer;
+      i {
+        margin-left: 28px;
+      }
+    }
+    i {
+      margin-left: 25px;
+    }
   }
-
-  
 }
 </style>
