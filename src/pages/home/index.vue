@@ -44,6 +44,7 @@
         </el-container>
       </el-container>
     </el-container>
+    <Guidance />
   </div>
 </template>
 
@@ -62,6 +63,7 @@ import ChatList from "./components/chatList.vue";
 import SessionArea from "./components/sessionArea.vue";
 import { useRouter, useRoute } from "vue-router";
 import ChatMain from "./components/main.vue";
+import Guidance from "./components/guidance.vue";
 
 const router = useRouter();
 
