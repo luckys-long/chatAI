@@ -87,7 +87,7 @@ const IatRecorder = class {
         // 重新开始录音
         setTimeout(() => {
           this.webSocketSend();
-        }, 500);
+        }, 300);
       };
       iatWS.onmessage = (e) => {
         this.result(e.data);

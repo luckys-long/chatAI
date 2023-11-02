@@ -47,9 +47,10 @@ const onSpeak = () => {
 const onStop = () => {
   iatRecorder.stop();
   isShow.value = false;
-  console.log("====>", iatRecorder);
+
   nextTick(() => {
     text.value = iatRecorder.resultText;
+    console.log("text====>", text.value);
   });
 };
 

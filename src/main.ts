@@ -12,6 +12,7 @@ import SvgIcon from "@/components/SvgIcon.vue";
 import ElementPlus from "element-plus";
 
 
+
 const app = createApp(App);
 
 app.use(createPinia());

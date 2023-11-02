@@ -14,6 +14,7 @@
                     style="margin-right: 0.5em"
                   ></i>
                   邀请好友
+                  <span class="y-icon">赚佣金!</span>
                 </p>
             
                 <p>
@@ -180,6 +181,13 @@ const onExit=()=>{
     i {
       margin-left: 25px;
     }
+  }
+  .y-icon{
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(106, 90, 205));
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: 10px;
   }
 }
 </style>
