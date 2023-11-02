@@ -1,5 +1,5 @@
 <template>
-  <el-dialog v-model="visible" :show-close="false">
+  <el-dialog v-model="visible" :show-close="false" width="50%">
     <template #header="{ close, titleId, titleClass }">
       <div class="my-header">
         <h4 :id="titleId" :class="titleClass">AI Chat机器人使用指导</h4>
@@ -9,14 +9,24 @@
         </el-button>
       </div>
     </template>
-    <div>
-      <div class="info-box">
+    <div style="display: flex;justify-content: space-between;width: 100%;">
+      <div class="info-box" style="width: 48%;">
         <i class="iconfont icon-yunliao"></i>
         <p>使用示例</p>
         <ul>
           <li>查询民法典第200条</li>
-          <li>写一封律师函</li>
+          <li>(输入案例分析)写一封律师函</li>
           <li>中英文翻译</li>
+       
+        </ul>
+      </div>
+      <div class="info-box" style="width: 48%;">
+        <i class="iconfont icon-yunliao"></i>
+        <p>能力</p>
+        <ul>
+          <li>直观感受第四次工业革命</li>
+          <li>记住用户之前在对话中说过的话</li>
+          <li>允许用户提供后续修正，接受或拒绝不适当请求的培训</li>
         </ul>
       </div>
     </div>
