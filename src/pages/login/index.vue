@@ -3,7 +3,7 @@
 <template>
   <div class="login-content"></div>
   <div class="login-box">
-    <p class="tilte-1">云律，您身边的好帮手</p>
+    <p class="tilte-1">云律，您身边的法律顾问（试用行版）</p>
     <div class="login-form">
       <p class="title-2">用户登录</p>
       <el-form
