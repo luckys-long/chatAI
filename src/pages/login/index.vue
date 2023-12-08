@@ -69,7 +69,7 @@ const rules  = reactive({
 .login-content {
   width: 100vw;
   height: 100vh;
-  @include setBgByUrl("@/assets/imgs/loginBg.png");
+  @include setBgByUrl("@/assets/bg.png");
 }
 .login-box {
   position: absolute;
